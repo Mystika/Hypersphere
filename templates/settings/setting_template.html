@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static "css/common.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/manage.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "css/fa.min.css" %}">
+    <script type="text/javascript" src="{% static "js/jquery.min.js" %}" ></script>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <nav class="left-nav">
+        <div class="user-panel">
+            <img class="user-img" src="http://api.randomuser.me/portraits/med/men/27.jpg" />
+            <span class="username">Username</span>
+        </div>
+        <ul class="nav">
+            <li {% block active-dashboard %}{% endblock %}><a href="#"><i class="fa fa-tachometer"></i>Dashboard</a></li>
+            <li {% block active-general %}{% endblock %}><a href="#"><i class="fa fa-cog"></i>General</a></li>
+            <li {% block active-profile %}{% endblock %}><a href="#"><i class="fa fa-user"></i>Profile</a></li>
+            <li {% block active-notify %}{% endblock %}><a href="#"><i class="fa fa-bell-o"></i>Notification</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="wrapper">
+            <span class="wrap-title">{%  block wrap-title %}{% endblock %}</span>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+    <aside>
+        Notifications
+    </aside>
+</body>
+</html>

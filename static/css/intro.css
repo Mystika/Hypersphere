@@ -1,0 +1,80 @@
+body {
+    background: url("/s/i/bg.jpg") no-repeat center center fixed;
+}
+
+/*video {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+	z-index: -1;
+	background: url('.jpg') no-repeat;
+	background-size: cover;
+	transition: 1s opacity;
+	-webkit-transition: 1s opacity;
+}  */
+
+.form-dialog {
+    width: 420px;
+    height: 430px;
+    padding-top: 35px;
+    background: rgba(255,255,255,0.1);
+    border-top: 3px solid #e74c3c;
+}
+
+.form-signup {
+    width: 320px;
+    margin: 20px auto 0 auto;
+}
+
+
+button.btn-sign-up {
+    margin-top: 20px;
+    width: 100%;
+    cursor:pointer;
+}
+
+small, span{
+    display: block;
+    color: #e74c3c;
+    margin:15px 0;
+}
+.form-password { float:left; }
+.form-password_confirm { float:right; }
+.form-password, .form-password_confirm {
+    width: 49%;
+}
+
+.form-login {
+    height: 340px;
+    padding-top: 10px;
+}
+
+#id_description {
+    resize:none;
+    overflow: hidden;
+}
+
+span#logo{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+a.login-desc{
+    text-decoration: underline;
+    color: #e74c3c;
+}
+
+
+.flat-input {
+    border-color: transparent;
+}
+
+.fa {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+}

@@ -1,0 +1,15 @@
+{% extends "login_template.html" %}
+{% load app_filters %}
+{% block content %}
+    <div class="form-dialog">
+        <form accept-charset="utf-8" action name="form-signup" class="form-signup" autocomplete="off" method="post">
+            <span id="logo">Prism</span>
+            {% csrf_token %}
+            {% for field in form.visible_fields %}
+                    <div class="form-group form-{{ field.label }}">{{ field }}{% if field.label in fa %}<i class="fa {{ fa|keyvalue:field.label }} icon-{{ field.label }}"></i>{% endif %}</div>
+            {% endfor %}
+            <button type="submit" class="btn btn-warn btn-sign-up">회원가입</button>
+            <small>이미 아이디가 있으시다면 <a href="/login" class="login-desc">로그인</a></small>
+        </form>
+	</div>
+{% endblock %}
